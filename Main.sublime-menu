@@ -1,36 +1,40 @@
 [
-    {
-        "caption": "Preferences",
-        "children": [
-            {
-                "caption": "Package Settings",
-                "children": [
-                    {
-                        "caption": "ColorPicker",
-                        "children": [
-                            {
-                                "args": {
-                                    "file": "${packages}/ColorPicker/ColorPicker.sublime-settings"
-                                },
-                                "caption": "Settings \u2013 Default",
-                                "command": "open_file"
-                            },
-                            {
-                                "args": {
-                                    "file": "${packages}/User/ColorPicker.sublime-settings"
-                                },
-                                "caption": "Settings \u2013 User",
-                                "command": "open_file"
-                            }
-                        ],
-                        "id": "colorpicker"
-                    }
-                ],
-                "id": "package-settings",
-                "mnemonic": "P"
-            }
-        ],
-        "id": "preferences",
-        "mnemonic": "n"
-    }
+	{
+		"id": "preferences",
+		"mnemonic": "n",
+		"caption": "Preferences",
+		"children":
+		[
+			{
+				"id": "package-settings",
+				"mnemonic": "P",
+				"caption": "Package Settings",
+				"children":
+				[
+					{
+						"id": "colorpicker",
+						"caption": "ColorPicker",
+						"children":
+						[
+							{
+								"caption": "Settings",
+								"command": "edit_settings", "args": {
+									"base_file": "${packages}/ColorPicker/ColorPicker.sublime-settings",
+									"default": "{\n$0\n}\n"
+								}
+							},
+							{ "caption": "-" },
+							{
+								"caption": "README",
+								"command": "open_file", "args":
+								{
+									"file": "${packages}/ColorPicker/README.md"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}
 ]
