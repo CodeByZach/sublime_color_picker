@@ -1,4 +1,6 @@
-[{
-	"caption": "Color Picker",
-	"command": "color_pick"
-}]
+[
+	{
+		"caption": "Color Picker",
+		"command": "color_pick"
+	}
+]

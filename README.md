@@ -1,14 +1,6 @@
-###Mac OSX
-![Mac OSX](http://i.minus.com/i5KI6SBAfs7Qk.png "Mac OS X")
-
-###Linux
-![Linux](http://i.minus.com/ihwLvn8m29GxZ.png "Linux")
-
-###Windows
-![Windows](http://i.minus.com/iY1DDCRG5TsyR.png "Windows")
-
 ## Installation
 Install this repository via [Package Control](https://sublime.wbond.net).
+Website: http://weslly.github.io/ColorPicker.
 
 
 ## Usage
