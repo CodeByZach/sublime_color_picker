@@ -3,6 +3,6 @@
 	// For lower-case (#abcdef), use false
 	"color_upper_case": true,
 
-	// Set false to use the default windows colorpicker
+	// Set false to use the default Windows colorpicker
 	"win_use_new_picker": true
 }

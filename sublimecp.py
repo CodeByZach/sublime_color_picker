@@ -324,7 +324,14 @@ class ColorPicker(object):
                 sublime_version == 2
             ):
                 color = color.decode('utf-8')
-
+                
+                # New win_Colorpicker.exe has return hex color code and alpha code. (ex: #FF0000FF = Red color + transparency 100%)
+                # Only applied to 'win_colorpicker.exe'.
+                if color == "CANCEL":    # When canceled.
+                    color = ""
+                else:
+                    color = color.replace('#','')[:6]
+        
         return color
 
     def is_valid_hex_color(self, s):
