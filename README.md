@@ -1,3 +1,13 @@
+<!-- ### macOS
+![macOS](macos_colorpicker_screenshot.png) -->
+
+<!-- ### Linux
+![Linux](linux_colorpicker_screenshot.png) -->
+
+### Windows
+![Windows](win_colorpicker_screenshot.png)
+
+
 ## Installation
 Install this repository via [Package Control](https://sublime.wbond.net).
 Website: http://weslly.github.io/ColorPicker.
@@ -8,7 +18,7 @@ To insert or change a selected color, use:
 
 - Linux: `ctrl+shift+c`
 - Windows: `ctrl+shift+c`
-- OS X: `cmd+shift+c`
+- macOS: `cmd+shift+c`
 
 By default, the hex color code is inserted using uppercase letters. To use lowercase letters instead, copy the contents of **`Preferences -> Package Settings -> ColorPicker -> Settings-Default`** to the empty file created by selecting **`Preferences -> Package Settings -> ColorPicker -> Settings-User`**, then change `"color_upper_case"` to `false`.
 
@@ -39,5 +49,5 @@ This command is used to call a color picker and get the selected value.  It take
 
 ## Acknowledgements
 
-- [Original colorpick plugin for OS X by jnordberg](https://github.com/jnordberg/sublime-colorpick/)
+- [Original colorpick plugin for macOS by jnordberg](https://github.com/jnordberg/sublime-colorpick/)
 - [Original colorpick plugin for Windows by animehunter](https://github.com/animehunter/SublimeColorPickerWindowsOnly)
