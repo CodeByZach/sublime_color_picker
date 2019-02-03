@@ -18,63 +18,27 @@
 						[
 							{
 								"caption": "Settings",
-								"command": "edit_settings", "args": {
+								"command": "edit_settings",
+								"args":
+								{
 									"base_file": "${packages}/ColorPicker/ColorPicker.sublime-settings",
 									"default": "{\n$0\n}\n"
 								}
 							},
 							{
-								"caption": "Key Bindings – Default",
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/ColorPicker/Default (OSX).sublime-keymap",
-									"platform": "OSX"
-								}
-							},
-							{
-								"caption": "Key Bindings – Default",
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/ColorPicker/Default (Linux).sublime-keymap",
-									"platform": "Linux"
-								}
-							},
-							{
-								"caption": "Key Bindings – Default",
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/ColorPicker/Default (Windows).sublime-keymap",
-									"platform": "Windows"
-								}
-							},
-							{
-								"caption": "Key Bindings – User",
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (OSX).sublime-keymap",
-									"platform": "OSX"
-								}
-							},
-							{
-								"caption": "Key Bindings – User",
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (Linux).sublime-keymap",
-									"platform": "Linux"
-								}
-							},
-							{
-								"caption": "Key Bindings – User",
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (Windows).sublime-keymap",
-									"platform": "Windows"
+								"caption": "Key Bindings",
+								"command": "edit_settings",
+								"args":
+								{
+									"base_file": "${packages}/ColorPicker/Default (${platform}).sublime-keymap",
+									"default": "[\n$0\n]\n"
 								}
 							},
 							{ "caption": "-" },
 							{
 								"caption": "README",
-								"command": "open_file", "args":
+								"command": "open_file",
+								"args":
 								{
 									"file": "${packages}/ColorPicker/README.md"
 								}

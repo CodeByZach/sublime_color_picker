@@ -1,11 +1,11 @@
 <!-- ### macOS
-![macOS](macos_colorpicker_screenshot.png) -->
+![macOS](docs/macos_colorpicker_screenshot.png) -->
 
 <!-- ### Linux
-![Linux](linux_colorpicker_screenshot.png) -->
+![Linux](docs/linux_colorpicker_screenshot.png) -->
 
 ### Windows
-![Windows](win_colorpicker_screenshot.png)
+![Windows](docs/win_colorpicker_screenshot.png)
 
 
 ## Installation
