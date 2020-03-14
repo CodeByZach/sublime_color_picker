@@ -20,6 +20,11 @@ To insert or change a selected color, use:
 - Windows: `ctrl+shift+c`
 - macOS: `cmd+shift+c`
 
+or use menu action
+
+- **`Tools`** -> **`ColorPicker`**
+
+
 By default, the hex color code is inserted using uppercase letters. To use lowercase letters instead, copy the contents of **`Preferences -> Package Settings -> ColorPicker -> Settings-Default`** to the empty file created by selecting **`Preferences -> Package Settings -> ColorPicker -> Settings-User`**, then change `"color_upper_case"` to `false`.
 
 ## Calling from Other Plugins

@@ -335,6 +335,9 @@ class ColorPicker(object):
 		return color
 
 	def is_valid_hex_color(self, s):
+		if s.startswith('0x'):
+			s = s[2:]
+
 		if len(s) not in (3, 6):
 			return False
 		try:
@@ -345,24 +348,34 @@ class ColorPicker(object):
 
 class ColorPickApiGetColorCommand(sublime_plugin.WindowCommand):
 	def run(self, settings, default_color=None):
-		if default_color is not None and default_color.startswith('#'):
-			default_color = default_color[1:]
-		color = ColorPicker().pick(self.window, default_color)
+		prefix = '#'
+		if default_color is not None:
+			if default_color.startswith('#'):
+				default_color = default_color[1:]
+			elif default_color.startsWith('0x'):
+				prefix = '0x'
+				default_color = default_color[2:]
 
 		s = sublime.load_settings(settings)
-		s.set('color_pick_return', '#' + color if color else None)
+		color = ColorPicker().pick(self.window, default_color)
+		s.set('color_pick_return', prefix + color if color else None)
+
 
 class ColorPickApiGetColorAsyncCommand(sublime_plugin.WindowCommand):
 	def run(self, settings, default_color=None):
-		if default_color is not None and default_color.startswith('#'):
-			default_color = default_color[1:]
+		prefix = '#'
+		if default_color is not None:
+			if default_color.startswith('#'):
+				default_color = default_color[1:]
+			elif default_color.startsWith('0x'):
+				prefix = '0x'
+				default_color = default_color[2:]
 
 		s = sublime.load_settings(settings)
 
 		def worker():
 			color = ColorPicker().pick(self.window, default_color)
-
-			s.set('color_pick_return', '#' + color if color else None)
+			s.set('color_pick_return', prefix + color if color else None)
 
 
 class ColorPickApiIsAvailableCommand(sublime_plugin.ApplicationCommand):
@@ -393,11 +406,15 @@ class ColorPickCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		sel = self.view.sel()
 		selected = None
+		prefix = '#'
 		# get the currently selected color - if any
 		if len(sel) > 0:
 			selected = self.view.substr(self.view.word(sel[0])).strip()
 			if selected.startswith('#'):
 				selected = selected[1:]
+			elif selected.startswith('0x'):
+				selected = selected[2:]
+				prefix = '0x'
 
 		cp = ColorPicker()
 
@@ -408,8 +425,10 @@ class ColorPickCommand(sublime_plugin.TextCommand):
 			# if the selected word is a valid color, remember it
 			if cp.is_valid_hex_color(self.view.substr(word)):
 				# include '#' if present
-				if self.view.substr(word.a - 1) == '#':
+				if prefix == '#' and self.view.substr(word.a - 1) == '#':
 					word = sublime.Region(word.a - 1, word.b)
+				# A "0x" prefix is considered part of the word and is included anyway
+
 				# remember
 				regions.append(word)
 			# otherwise just remember the selected region
@@ -429,7 +448,7 @@ class ColorPickCommand(sublime_plugin.TextCommand):
 					color = color.upper()
 				else:
 					color = color.lower()
-				self.view.run_command('color_pick_replace_regions_helper', {'color': '#'+color})
+				self.view.run_command('color_pick_replace_regions_helper', {'color': prefix+color})
 
 		threading.Thread(target=worker).start()
 
