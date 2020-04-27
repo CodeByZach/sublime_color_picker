@@ -2,9 +2,31 @@
 // Any changes made here could be overwritten when this program is updated.
 [
 	{
-		"id": "preferences",
-		"mnemonic": "n",
+		"caption": "Tools",
+		"mnemonic": "T",
+		"id": "tools",
+		"children":
+		[
+			{
+				"id": "packages",
+				"caption": "Packages",
+				"children":
+				[
+					{
+						"caption": "ColorPicker",
+						"children":
+						[
+							{ "caption": "ColorPicker", "command": "color_pick" }
+						]
+					}
+				]
+			}
+		]
+	},
+	{
 		"caption": "Preferences",
+		"mnemonic": "n",
+		"id": "preferences",
 		"children":
 		[
 			{
@@ -99,28 +121,6 @@
 								"command": "open_file",
 								"args": { "file": "${packages}/ColorPicker/README.md" }
 							}
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"caption": "Tools",
-		"mnemonic": "T",
-		"id": "tools",
-		"children":
-		[
-			{
-				"id": "packages",
-				"caption": "Packages",
-				"children":
-				[
-					{
-						"caption": "ColorPicker",
-						"children":
-						[
-							{ "caption": "ColorPicker", "command": "color_pick" }
 						]
 					}
 				]
