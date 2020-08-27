@@ -1,3 +1,6 @@
+# ColorPicker
+[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_color_picker.svg?label=version)](https://github.com/EatBreatheCode/sublime_color_picker/releases)
+
 <!-- ### macOS
 ![macOS](docs/macos_colorpicker_screenshot.png) -->
 
