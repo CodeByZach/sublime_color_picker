@@ -1,5 +1,5 @@
 # ColorPicker
-[![Latest Release](https://img.shields.io/github/tag/EatBreatheCode/sublime_color_picker.svg?label=version)](https://github.com/EatBreatheCode/sublime_color_picker/releases)
+[![Latest Release](https://img.shields.io/github/tag/CodeByZach/sublime_color_picker.svg?label=version)](https://github.com/CodeByZach/sublime_color_picker/releases)
 
 <!-- ### macOS
 ![macOS](docs/macos_colorpicker_screenshot.png) -->
@@ -13,7 +13,7 @@
 
 ## Installation
 Install this repository via [Package Control](https://sublime.wbond.net).
-Website: https://eatbreathecode.github.io/sublime_color_picker/.
+Website: https://codebyzach.github.io/sublime_color_picker/.
 
 
 ## Usage
