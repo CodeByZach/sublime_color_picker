@@ -1,130 +1,130 @@
 // <> NOTICE <>
 // Any changes made here could be overwritten when this program is updated.
 [
-	{
-		"caption": "Tools",
-		"mnemonic": "T",
-		"id": "tools",
-		"children":
-		[
-			{
-				"id": "packages",
-				"caption": "Packages",
-				"children":
-				[
-					{
-						"caption": "ColorPicker",
-						"children":
-						[
-							{ "caption": "ColorPicker", "command": "color_pick" }
-						]
-					}
-				]
-			}
-		]
-	},
-	{
-		"caption": "Preferences",
-		"mnemonic": "n",
-		"id": "preferences",
-		"children":
-		[
-			{
-				"id": "package-settings",
-				"mnemonic": "P",
-				"caption": "Package Settings",
-				"children":
-				[
-					{
-						"id": "colorpicker",
-						"caption": "ColorPicker",
-						"children":
-						[
-							{
-								"caption": "Settings",
-								"command": "edit_settings",
-								"args":
-								{
-									"base_file": "${packages}/ColorPicker/ColorPicker.sublime-settings",
-									"default": "{\n\t$0\n}\n"
-								}
-							},
-							{
-								"caption": "Key Bindings",
-								"command": "edit_settings",
-								"args":
-								{
-									"base_file": "${packages}/ColorPicker/Default (${platform}).sublime-keymap",
-									"default": "[\n\t$0\n]\n"
-								}
-							},
-							{ "caption": "-" },
-							{
-								"caption": "Menus",
-								"children":
-								[
-									{
-										"caption": "Context Menu",
-										"command": "z_edit_settings",
-										"args":
-										{
-											"is_parent_setting": "1",
-											"base_file": "${packages}/ColorPicker/Context.sublime-menu",
-											"default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
-										}
-									},
-									{
-										"caption": "Side Bar Menu",
-										"command": "z_edit_settings",
-										"args":
-										{
-											"is_parent_setting": "1",
-											"base_file": "${packages}/ColorPicker/Side Bar.sublime-menu",
-											"default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
-										}
-									},
-									{
-										"caption": "Tab Menu",
-										"command": "z_edit_settings",
-										"args":
-										{
-											"is_parent_setting": "1",
-											"base_file": "${packages}/ColorPicker/Tab Context.sublime-menu",
-											"default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
-										}
-									},
-									{
-										"caption": "Main Menu",
-										"command": "z_edit_settings",
-										"args":
-										{
-											"is_parent_setting": "1",
-											"base_file": "${packages}/ColorPicker/Main.sublime-menu",
-											"default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
-										}
-									}
-								]
-							},
-							{
-								"caption": "Commands",
-								"command": "z_edit_settings",
-								"args":
-								{
-									"is_parent_setting": "1",
-									"base_file": "${packages}/ColorPicker/Default.sublime-commands",
-									"default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
-								}
-							},
-							{ "caption": "-" },
-							{
-								"caption": "README",
-								"command": "open_file",
-								"args": { "file": "${packages}/ColorPicker/README.md" }
-							}
-						]
-					}
-				]
-			}
-		]
-	}
+    {
+        "caption": "Tools",
+        "mnemonic": "T",
+        "id": "tools",
+        "children":
+        [
+            {
+                "id": "packages",
+                "caption": "Packages",
+                "children":
+                [
+                    {
+                        "caption": "ColorPicker",
+                        "children":
+                        [
+                            { "caption": "ColorPicker", "command": "color_pick" }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "id": "package-settings",
+                "mnemonic": "P",
+                "caption": "Package Settings",
+                "children":
+                [
+                    {
+                        "id": "colorpicker",
+                        "caption": "ColorPicker",
+                        "children":
+                        [
+                            {
+                                "caption": "Settings",
+                                "command": "edit_settings",
+                                "args":
+                                {
+                                    "base_file": "${packages}/ColorPicker/ColorPicker.sublime-settings",
+                                    "default": "{\n\t$0\n}\n"
+                                }
+                            },
+                            {
+                                "caption": "Key Bindings",
+                                "command": "edit_settings",
+                                "args":
+                                {
+                                    "base_file": "${packages}/ColorPicker/Default (${platform}).sublime-keymap",
+                                    "default": "[\n\t$0\n]\n"
+                                }
+                            },
+                            { "caption": "-" },
+                            {
+                                "caption": "Menus",
+                                "children":
+                                [
+                                    {
+                                        "caption": "Context Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "is_parent_setting": "1",
+                                            "base_file": "${packages}/ColorPicker/Context.sublime-menu",
+                                            "default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Side Bar Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "is_parent_setting": "1",
+                                            "base_file": "${packages}/ColorPicker/Side Bar.sublime-menu",
+                                            "default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Tab Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "is_parent_setting": "1",
+                                            "base_file": "${packages}/ColorPicker/Tab Context.sublime-menu",
+                                            "default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
+                                        }
+                                    },
+                                    {
+                                        "caption": "Main Menu",
+                                        "command": "z_edit_settings",
+                                        "args":
+                                        {
+                                            "is_parent_setting": "1",
+                                            "base_file": "${packages}/ColorPicker/Main.sublime-menu",
+                                            "default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "caption": "Commands",
+                                "command": "z_edit_settings",
+                                "args":
+                                {
+                                    "is_parent_setting": "1",
+                                    "base_file": "${packages}/ColorPicker/Default.sublime-commands",
+                                    "default": "// <> NOTICE <>\n// Any changes made here could be overwritten when this program is updated.\n[\n\t$0\n]\n"
+                                }
+                            },
+                            { "caption": "-" },
+                            {
+                                "caption": "README",
+                                "command": "open_file",
+                                "args": { "file": "${packages}/ColorPicker/README.md" }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 ]
