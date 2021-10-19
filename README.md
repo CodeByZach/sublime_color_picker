@@ -10,7 +10,7 @@
 
 ## Installation
 Install this repository via [Package Control](https://sublime.wbond.net).
-Website: https://eatbreathecode.github.io/sublime_color_picker/.
+Website: https://codebyzach.github.io/sublime_color_picker/.
 
 
 ## Usage
