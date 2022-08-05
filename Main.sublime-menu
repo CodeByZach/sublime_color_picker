@@ -36,7 +36,6 @@
                 "children":
                 [
                     {
-                        "id": "colorpicker",
                         "caption": "ColorPicker",
                         "children":
                         [
