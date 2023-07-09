@@ -1,8 +1,5 @@
 // <> NOTICE <>
 // Any changes made here could be overwritten when this program is updated.
 [
-    {
-        "caption": "Color Picker",
-        "command": "color_pick"
-    }
+    { "caption": "Color Picker", "command": "color_pick" }
 ]
