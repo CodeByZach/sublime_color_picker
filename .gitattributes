@@ -1,5 +1,8 @@
+.gitignore     export-ignore
+.gitattributes export-ignore
+
 # Files & folders that should not be included in production.
-.* export-ignore
-docs export-ignore
-mkdocs.yml export-ignore
-tox.ini export-ignore
+/.github/        export-ignore
+/docs/           export-ignore
+/mkdocs.yml      export-ignore
+/tox.ini         export-ignore
