@@ -8,7 +8,7 @@
 ![Linux](docs/linux_colorpicker_screenshot.png) -->
 
 ### Windows
-![Windows](docs/win_colorpicker_screenshot.png)
+![Windows](docs/src/images/win_colorpicker_screenshot.png)
 
 
 ## Installation

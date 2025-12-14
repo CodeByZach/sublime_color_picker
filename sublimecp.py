@@ -3,7 +3,6 @@ import sublime_plugin
 import subprocess
 import os
 import threading
-from stat import *
 
 sublime_version = 2
 
@@ -325,12 +324,12 @@ class ColorPicker(object):
             ):
                 color = color.decode('utf-8')
 
-                # New win_Colorpicker.exe has return hex color code and alpha code. (ex: #FF0000FF = Red color + transparency 100%)
-                # Only applied to 'win_colorpicker.exe'.
-                if color == "CANCEL":    # When canceled.
+                # New win_Colorpicker.exe returns hex color code and alpha code.
+                # (ex: #FF0000FF = Red + 100% opacity). Only applied to 'win_colorpicker.exe'.
+                if color == "CANCEL":  # When canceled.
                     color = ""
                 else:
-                    color = color.replace('#','')[:6]
+                    color = color.replace('#', '')[:6]
 
         return color
 
@@ -367,7 +366,7 @@ class ColorPickApiGetColorAsyncCommand(sublime_plugin.WindowCommand):
         if default_color is not None:
             if default_color.startswith('#'):
                 default_color = default_color[1:]
-            elif default_color.startsWith('0x'):
+            elif default_color.startswith('0x'):
                 prefix = '0x'
                 default_color = default_color[2:]
 
@@ -377,11 +376,14 @@ class ColorPickApiGetColorAsyncCommand(sublime_plugin.WindowCommand):
             color = ColorPicker().pick(self.window, default_color)
             s.set('color_pick_return', prefix + color if color else None)
 
+        threading.Thread(target=worker).start()
+
 
 class ColorPickApiIsAvailableCommand(sublime_plugin.ApplicationCommand):
     def run(self, settings):
         s = sublime.load_settings(settings)
         s.set('color_pick_return', True)
+
 
 # cannot use edit objects in separate threads, so we need a helper command
 class ColorPickReplaceRegionsHelperCommand(sublime_plugin.TextCommand):
@@ -400,7 +402,9 @@ class ColorPickReplaceRegionsHelperCommand(sublime_plugin.TextCommand):
 
             replaceRegionsRecursion()
 
-        replaceRegionsRecursion() # we change where the text points refer, so we have to replace one, and then refetch the locations
+        # We change where the text points refer, so we have to replace one, and then refetch the locations
+        replaceRegionsRecursion()
+
 
 class ColorPickCommand(sublime_plugin.TextCommand):
     def run(self, edit):
@@ -448,9 +452,10 @@ class ColorPickCommand(sublime_plugin.TextCommand):
                     color = color.upper()
                 else:
                     color = color.lower()
-                self.view.run_command('color_pick_replace_regions_helper', {'color': prefix+color})
+                self.view.run_command('color_pick_replace_regions_helper', {'color': prefix + color})
 
         threading.Thread(target=worker).start()
+
 
 libdir = os.path.join('ColorPicker', 'lib')
 if sublime.platform() == 'osx':

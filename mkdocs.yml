@@ -1,0 +1,42 @@
+site_name: ColorPicker
+site_url: https://codebyzach.github.io/sublime_color_picker
+repo_url: https://github.com/CodeByZach/sublime_color_picker
+edit_uri: ""
+
+docs_dir: docs/src
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Home: index.md
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.highlight:
+      extend_pygments_lang:
+        - name: php-hierarchicalsymbols
+          lang: php
+  - pymdownx.superfences
+
+plugins:
+  - search
